@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>
+      Global Scope
+    </title>
+  </head>
+  <body>
+    <script>
+      var i = "I am Global Scope"; //Global Variabe
+      function show() {
+        document.write(i + "<br/>"); // Inside Function
+      }
+      show();
+      document.write(i + "<br/>"); // Outside function
+
+      function display() {
+        document.write(i + "<br>"); // inside function
+      }
+      display();
+    </script>
+  </body>
+</html>

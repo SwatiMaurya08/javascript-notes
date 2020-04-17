@@ -4,16 +4,19 @@
   </head>
   <body>
     <script>
+      var i = "I am the  Global  variable";
       function Outerfun() {
         var j = "I am the  Local variable of outer function";
+        document.write(i + "<br/>");
         document.write(j + "<br/>");
         function innerfun() {
           var k = "I  am the Local variable of inner function";
+          document.write(i + "<br/>");
           document.write(k + "<br/>");
           document.write(j + "<br/>"); // here we are accessing the outer function variable so it is a closure
         }
         innerfun();
-      }
+      } //inner function can access outer function local  variable but vice versa is  not  true and  inner function  can  also access global  variable
       Outerfun();
     </script>
   </body>

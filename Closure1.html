@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      function Outerfun() {
+        var j = "I am the  Local variable of outer function";
+        document.write(j + "<br/>");
+        function innerfun() {
+          var k = "I  am the Local variable of inner function";
+          document.write(k + "<br/>");
+          document.write(j + "<br/>"); // here we are accessing the outer function variable so it is a closure
+        }
+        innerfun();
+      }
+      Outerfun();
+    </script>
+  </body>
+</html>
